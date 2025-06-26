@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { School, MapPin, Users, Calendar } from 'lucide-react';
 
