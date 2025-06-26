@@ -18,8 +18,8 @@ const TerraVermelha = () => {
           <div>
             <div className="mb-8">
               <img 
-                src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=600&h=400&fit=crop" 
-                alt="Solo fértil com plantas" 
+                src="/lovable-uploads/5207233e-e53c-4d3a-8dd2-43dcfd7445f0.png" 
+                alt="Terra vermelha característica" 
                 className="w-full h-64 object-cover rounded-xl shadow-lg"
               />
             </div>

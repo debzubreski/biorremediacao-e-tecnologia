@@ -18,8 +18,8 @@ const TerraPosColheita = () => {
           <div className="bg-white p-8 rounded-xl shadow-lg border border-yellow-100">
             <div className="mb-6">
               <img 
-                src="https://images.unsplash.com/photo-1482881497185-d4a9ddbe4151?w=600&h=400&fit=crop" 
-                alt="Solo após colheita" 
+                src="/lovable-uploads/e2fa5f8c-3f8e-45f7-a47e-871b173811ce.png" 
+                alt="Campo após colheita" 
                 className="w-full h-48 object-cover rounded-lg shadow-md"
               />
             </div>

@@ -18,8 +18,8 @@ const TerraVegetal = () => {
           <div>
             <div className="mb-8">
               <img 
-                src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=600&h=400&fit=crop" 
-                alt="Terra vegetal rica em nutrientes" 
+                src="/lovable-uploads/e339ef2b-6ed7-4e45-b507-f962dfa3d9b0.png" 
+                alt="Mãos protegendo uma planta na terra vegetal" 
                 className="w-full h-64 object-cover rounded-xl shadow-lg"
               />
             </div>
