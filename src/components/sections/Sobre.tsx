@@ -7,7 +7,7 @@ const Sobre = () => {
     "Antonela Secchi Conzati",
     "Débora Zubreski", 
     "Nicoly Sieben",
-    "Roberta Hoesel"
+    "Roberta Hosel"
   ];
 
   return (
@@ -17,7 +17,7 @@ const Sobre = () => {
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Sobre Nosso Trabalho</h2>
           <div className="w-24 h-1 bg-blue-500 mx-auto mb-8"></div>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Este website é resultado de um trabalho escolar dedicado ao estudo da biorremediação e suas aplicações tecnológicas
+            Este website é resultado de um trabalho escolar dedicado ao estudo da biorremediação e suas aplicações tecnológicas.
           </p>
         </div>
         
@@ -88,9 +88,10 @@ const Sobre = () => {
             <div className="bg-green-50 p-6 rounded-lg border-l-4 border-green-500">
               <h4 className="font-semibold text-green-800 mb-2">Objetivo do Projeto</h4>
               <p className="text-green-700 text-sm">
-                Desenvolver conhecimento sobre tecnologias de biorremediação e sua aplicação 
-                em diferentes tipos de solo, contribuindo para a educação ambiental e 
-                sustentabilidade através de pesquisa científica aplicada.
+                Este trabalho tem como objetivo principal oferecer um maior conhecimento a todos sobre a importância da biorremediação, 
+                destacando sua relevância como tecnologia sustentável para a recuperação de solos contaminados. 
+                Através desta pesquisa, buscamos contribuir para a educação ambiental e promover a conscientização 
+                sobre soluções biotecnológicas aplicadas à preservação do meio ambiente.
               </p>
             </div>
           </div>
