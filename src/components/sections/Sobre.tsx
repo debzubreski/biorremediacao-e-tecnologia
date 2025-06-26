@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { School, MapPin, Users, Calendar } from 'lucide-react';
 
@@ -104,21 +103,6 @@ const Sobre = () => {
             biorremediação, destacando a importância das tecnologias ambientais sustentáveis 
             para o futuro do nosso planeta e das próximas gerações.
           </p>
-          
-          <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white bg-opacity-20 p-4 rounded-lg">
-              <h4 className="font-semibold mb-2">Pesquisa</h4>
-              <p className="text-sm opacity-90">Investigação científica aplicada</p>
-            </div>
-            <div className="bg-white bg-opacity-20 p-4 rounded-lg">
-              <h4 className="font-semibold mb-2">Educação</h4>
-              <p className="text-sm opacity-90">Disseminação do conhecimento</p>
-            </div>
-            <div className="bg-white bg-opacity-20 p-4 rounded-lg">
-              <h4 className="font-semibold mb-2">Sustentabilidade</h4>
-              <p className="text-sm opacity-90">Tecnologias ambientais</p>
-            </div>
-          </div>
         </div>
       </div>
     </section>
