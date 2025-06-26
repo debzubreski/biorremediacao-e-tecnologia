@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Waves, TreePine, Fish } from 'lucide-react';
+import { Waves, TreePine, Fish, Sprout, Leaf } from 'lucide-react';
 
 const TerraVegetal = () => {
   return (
@@ -10,12 +10,20 @@ const TerraVegetal = () => {
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Terra Vegetal</h2>
           <div className="w-24 h-1 bg-green-500 mx-auto mb-8"></div>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Solo rico em matéria orgânica encontrado em áreas próximas a rios e zonas ripárias
+            Solo rico em matéria orgânica encontrado em áreas próximas a rios e zonas ripárias, ideal para horticultura
           </p>
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
           <div>
+            <div className="mb-8">
+              <img 
+                src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=600&h=400&fit=crop" 
+                alt="Terra vegetal rica em nutrientes" 
+                className="w-full h-64 object-cover rounded-xl shadow-lg"
+              />
+            </div>
+            
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Características Especiais</h3>
             
             <div className="space-y-6">
@@ -61,9 +69,38 @@ const TerraVegetal = () => {
           </div>
           
           <div className="bg-white p-8 rounded-xl shadow-lg border border-green-100">
-            <h3 className="text-xl font-bold text-gray-900 mb-6">Composição Ideal</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-6">Uso Agrícola</h3>
+            
+            <div className="grid grid-cols-2 gap-3 mb-6">
+              <div className="flex items-center gap-2 bg-green-50 p-3 rounded-lg">
+                <Leaf className="w-5 h-5 text-green-600" />
+                <span className="text-sm font-medium text-green-800">Hortaliças</span>
+              </div>
+              <div className="flex items-center gap-2 bg-orange-50 p-3 rounded-lg">
+                <Sprout className="w-5 h-5 text-orange-600" />
+                <span className="text-sm font-medium text-orange-800">Frutas</span>
+              </div>
+              <div className="flex items-center gap-2 bg-purple-50 p-3 rounded-lg">
+                <TreePine className="w-5 h-5 text-purple-600" />
+                <span className="text-sm font-medium text-purple-800">Plantas Ornamentais</span>
+              </div>
+              <div className="flex items-center gap-2 bg-blue-50 p-3 rounded-lg">
+                <Waves className="w-5 h-5 text-blue-600" />
+                <span className="text-sm font-medium text-blue-800">Cultivos Aquáticos</span>
+              </div>
+            </div>
             
             <div className="space-y-4">
+              <div>
+                <h4 className="font-semibold text-green-600 mb-2">Principais Aplicações:</h4>
+                <ul className="text-gray-700 space-y-1 text-sm">
+                  <li>• <strong>Horticultura:</strong> Ideal para vegetais folhosos</li>
+                  <li>• <strong>Jardinagem:</strong> Perfeita para plantas ornamentais</li>
+                  <li>• <strong>Fruticultura:</strong> Excelente para árvores frutíferas</li>
+                  <li>• <strong>Viveiros:</strong> Base para produção de mudas</li>
+                </ul>
+              </div>
+              
               <div className="bg-green-50 p-4 rounded-lg">
                 <div className="flex justify-between items-center mb-2">
                   <span className="font-medium text-green-800">Matéria Orgânica</span>
@@ -81,26 +118,6 @@ const TerraVegetal = () => {
                 </div>
                 <div className="w-full bg-blue-200 rounded-full h-2">
                   <div className="bg-blue-500 h-2 rounded-full" style={{width: '70%'}}></div>
-                </div>
-              </div>
-              
-              <div className="bg-purple-50 p-4 rounded-lg">
-                <div className="flex justify-between items-center mb-2">
-                  <span className="font-medium text-purple-800">pH</span>
-                  <span className="text-purple-600 font-bold">6.0-7.0</span>
-                </div>
-                <div className="w-full bg-purple-200 rounded-full h-2">
-                  <div className="bg-purple-500 h-2 rounded-full" style={{width: '85%'}}></div>
-                </div>
-              </div>
-              
-              <div className="bg-yellow-50 p-4 rounded-lg">
-                <div className="flex justify-between items-center mb-2">
-                  <span className="font-medium text-yellow-800">Atividade Microbiana</span>
-                  <span className="text-yellow-600 font-bold">Alta</span>
-                </div>
-                <div className="w-full bg-yellow-200 rounded-full h-2">
-                  <div className="bg-yellow-500 h-2 rounded-full" style={{width: '95%'}}></div>
                 </div>
               </div>
             </div>

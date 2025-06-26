@@ -6,6 +6,7 @@ import OQueE from '../components/sections/OQueE';
 import TerraVermelha from '../components/sections/TerraVermelha';
 import TerraPosColheita from '../components/sections/TerraPosColheita';
 import TerraVegetal from '../components/sections/TerraVegetal';
+import SensorArduino from '../components/sections/SensorArduino';
 import Sobre from '../components/sections/Sobre';
 
 const Index = () => {
@@ -47,6 +48,10 @@ const Index = () => {
       
       <div id="terra-vegetal">
         <TerraVegetal />
+      </div>
+      
+      <div id="sensor-arduino">
+        <SensorArduino />
       </div>
       
       <div id="sobre">

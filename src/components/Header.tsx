@@ -69,6 +69,13 @@ const Header = ({ onNavigate }: HeaderProps) => {
             </div>
             
             <button
+              onClick={() => onNavigate('sensor-arduino')}
+              className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+            >
+              Sensor Arduino
+            </button>
+            
+            <button
               onClick={() => onNavigate('sobre')}
               className="text-gray-700 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
             >

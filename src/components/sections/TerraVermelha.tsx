@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Mountain, BarChart3, Droplets } from 'lucide-react';
+import { Mountain, BarChart3, Droplets, Coffee, Wheat } from 'lucide-react';
 
 const TerraVermelha = () => {
   return (
@@ -10,12 +10,20 @@ const TerraVermelha = () => {
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Terra Vermelha</h2>
           <div className="w-24 h-1 bg-red-500 mx-auto mb-8"></div>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Solo laterítico rico em óxidos de ferro, característico de regiões tropicais
+            Solo laterítico rico em óxidos de ferro, característico de regiões tropicais e amplamente utilizado na agricultura brasileira
           </p>
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
           <div>
+            <div className="mb-8">
+              <img 
+                src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=600&h=400&fit=crop" 
+                alt="Solo fértil com plantas" 
+                className="w-full h-64 object-cover rounded-xl shadow-lg"
+              />
+            </div>
+            
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Características</h3>
             <div className="space-y-4">
               <div className="flex items-start gap-4">
@@ -51,24 +59,46 @@ const TerraVermelha = () => {
           </div>
           
           <div className="bg-white p-8 rounded-xl shadow-lg border border-red-100">
-            <h3 className="text-xl font-bold text-gray-900 mb-6">Biorremediação em Terra Vermelha</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-6">Uso Agrícola</h3>
             
             <div className="space-y-6">
+              <div className="grid grid-cols-2 gap-4 mb-6">
+                <div className="flex items-center gap-3 bg-green-50 p-3 rounded-lg">
+                  <Coffee className="w-6 h-6 text-green-600" />
+                  <span className="font-medium text-green-800">Café</span>
+                </div>
+                <div className="flex items-center gap-3 bg-yellow-50 p-3 rounded-lg">
+                  <Wheat className="w-6 h-6 text-yellow-600" />
+                  <span className="font-medium text-yellow-800">Soja</span>
+                </div>
+                <div className="flex items-center gap-3 bg-orange-50 p-3 rounded-lg">
+                  <Wheat className="w-6 h-6 text-orange-600" />
+                  <span className="font-medium text-orange-800">Milho</span>
+                </div>
+                <div className="flex items-center gap-3 bg-amber-50 p-3 rounded-lg">
+                  <Wheat className="w-6 h-6 text-amber-600" />
+                  <span className="font-medium text-amber-800">Trigo</span>
+                </div>
+              </div>
+              
               <div>
-                <h4 className="font-semibold text-green-600 mb-2">Estratégias Específicas:</h4>
-                <ul className="text-gray-700 space-y-2">
-                  <li>• Correção do pH com calcário para otimizar atividade microbiana</li>
-                  <li>• Adição de matéria orgânica para melhorar fertilidade</li>
-                  <li>• Uso de plantas hiperacumuladoras para metais pesados</li>
-                  <li>• Inoculação com microrganismos tolerantes ao pH ácido</li>
+                <h4 className="font-semibold text-green-600 mb-2">Principais Cultivos:</h4>
+                <p className="text-gray-700 text-sm mb-4">
+                  A terra vermelha é amplamente utilizada na agricultura brasileira, especialmente para:
+                </p>
+                <ul className="text-gray-700 space-y-2 text-sm">
+                  <li>• <strong>Café:</strong> Solo ideal para plantações de café arábica</li>
+                  <li>• <strong>Soja:</strong> Excelente para cultivo com correção adequada</li>
+                  <li>• <strong>Milho:</strong> Boa produtividade com manejo correto</li>
+                  <li>• <strong>Trigo:</strong> Adaptado para regiões de clima temperado</li>
                 </ul>
               </div>
               
               <div className="bg-green-50 p-4 rounded-lg">
-                <h4 className="font-semibold text-green-800 mb-2">Desafios:</h4>
+                <h4 className="font-semibold text-green-800 mb-2">Biorremediação:</h4>
                 <p className="text-green-700 text-sm">
-                  A alta concentração de ferro pode interferir na disponibilidade de nutrientes 
-                  e na atividade de alguns microrganismos, exigindo estratégias adaptadas.
+                  Correção do pH com calcário, adição de matéria orgânica e uso de 
+                  microrganismos tolerantes ao pH ácido para otimizar a atividade biológica.
                 </p>
               </div>
             </div>
