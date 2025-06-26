@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Wheat, Zap, Leaf, Corn, Sprout } from 'lucide-react';
+import { Wheat, Zap, Leaf, Sprout } from 'lucide-react';
 
 const TerraPosColheita = () => {
   return (
@@ -64,7 +64,7 @@ const TerraPosColheita = () => {
             
             <div className="grid grid-cols-2 gap-4 mb-8">
               <div className="flex items-center gap-3 bg-green-50 p-4 rounded-lg">
-                <Corn className="w-8 h-8 text-green-600" />
+                <Sprout className="w-8 h-8 text-green-600" />
                 <div>
                   <div className="font-semibold text-green-800">Milho</div>
                   <div className="text-xs text-green-600">Grande consumidor de N</div>
