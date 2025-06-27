@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Cpu, Zap, Droplets, BarChart3, Lightbulb } from 'lucide-react';
 
@@ -103,15 +102,15 @@ const SensorArduino = () => {
                 <div className="space-y-2">
                   <div className="flex items-center gap-2">
                     <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                    <span className="text-red-600 text-sm">Solo Seco (0-30%)</span>
+                    <span className="text-red-600 text-sm">Solo Seco (valor > 800)</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                    <span className="text-yellow-600 text-sm">Solo Moderado (30-70%)</span>
+                    <span className="text-yellow-600 text-sm">Solo Úmido (valor > 400)</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                    <span className="text-green-600 text-sm">Solo Úmido (70-100%)</span>
+                    <span className="text-green-600 text-sm">Solo Molhado (valor ≤ 400)</span>
                   </div>
                 </div>
               </div>
