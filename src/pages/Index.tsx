@@ -7,6 +7,7 @@ import TerraVermelha from '../components/sections/TerraVermelha';
 import TerraPosColheita from '../components/sections/TerraPosColheita';
 import TerraVegetal from '../components/sections/TerraVegetal';
 import SensorArduino from '../components/sections/SensorArduino';
+import PerguntasRespostas from '../components/sections/PerguntasRespostas';
 import Sobre from '../components/sections/Sobre';
 
 const Index = () => {
@@ -52,6 +53,10 @@ const Index = () => {
       
       <div id="sensor-arduino">
         <SensorArduino />
+      </div>
+      
+      <div id="perguntas-respostas">
+        <PerguntasRespostas />
       </div>
       
       <div id="sobre">
