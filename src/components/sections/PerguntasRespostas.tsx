@@ -4,6 +4,7 @@ import { MessageCircle, HelpCircle, Send } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
+import emailjs from '@emailjs/browser';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
 import { Button } from '../ui/button';
 import { Textarea } from '../ui/textarea';
@@ -22,6 +23,11 @@ type PerguntaForm = z.infer<typeof perguntaSchema>;
 const PerguntasRespostas = () => {
   const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
+
+  // Configuração do EmailJS - SUBSTITUA PELOS SEUS DADOS
+  const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';
+  const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
+  const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
 
   const {
     register,
@@ -63,12 +69,25 @@ const PerguntasRespostas = () => {
   const onSubmit = async (data: PerguntaForm) => {
     setIsLoading(true);
     
-    // Simulação de envio - aqui seria integrado com EmailJS
     try {
-      console.log('Pergunta enviada:', data);
-      
-      // Simular delay de envio
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // Preparar dados para o EmailJS
+      const templateParams = {
+        nome: data.nome || 'Não informado',
+        email: data.email || 'Não informado',
+        categoria: data.categoria,
+        pergunta: data.pergunta,
+        to_email: 'seuemail@exemplo.com', // SUBSTITUA pelo seu email
+      };
+
+      console.log('Enviando pergunta via EmailJS:', templateParams);
+
+      // Enviar email via EmailJS
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        templateParams,
+        EMAILJS_PUBLIC_KEY
+      );
       
       toast({
         title: 'Pergunta enviada com sucesso!',
@@ -77,6 +96,7 @@ const PerguntasRespostas = () => {
       
       reset();
     } catch (error) {
+      console.error('Erro ao enviar pergunta:', error);
       toast({
         title: 'Erro ao enviar pergunta',
         description: 'Tente novamente mais tarde.',
@@ -137,7 +157,7 @@ const PerguntasRespostas = () => {
                 <CardTitle className="text-2xl text-gray-900">Faça sua Pergunta</CardTitle>
               </div>
               <CardDescription>
-                Não encontrou o que procurava? Envie sua pergunta e responderemos em breve!
+                Não encontrou o que procurava? Envie sua pergunta e responderemos no seu email (se fornecido)!
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -154,7 +174,7 @@ const PerguntasRespostas = () => {
                   <input
                     {...register('email')}
                     type="email"
-                    placeholder="seu@email.com (opcional)"
+                    placeholder="seu@email.com (opcional - para resposta)"
                     className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                   />
                   {errors.email && (
@@ -220,6 +240,22 @@ const PerguntasRespostas = () => {
               Cada pergunta é uma oportunidade de aprendizado para toda a comunidade.
             </p>
           </div>
+        </div>
+
+        {/* Instruções de configuração do EmailJS */}
+        <div className="mt-8 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+          <h4 className="font-semibold text-yellow-800 mb-2">⚙️ Configuração Necessária:</h4>
+          <p className="text-yellow-700 text-sm">
+            Para receber as perguntas no seu email, você precisa configurar o EmailJS:
+            <br />
+            1. Crie uma conta em <a href="https://emailjs.com" target="_blank" rel="noopener noreferrer" className="underline">emailjs.com</a>
+            <br />
+            2. Configure um serviço de email (Gmail, Outlook, etc.)
+            <br />
+            3. Crie um template de email
+            <br />
+            4. Substitua as constantes no código pelos seus dados do EmailJS
+          </p>
         </div>
       </div>
     </section>
