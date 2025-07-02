@@ -1,42 +1,13 @@
 
-import React, { useState } from 'react';
-import { MessageCircle, HelpCircle, Send } from 'lucide-react';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import * as z from 'zod';
-import emailjs from '@emailjs/browser';
+import React from 'react';
+import { MessageCircle, HelpCircle, ExternalLink } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
 import { Button } from '../ui/button';
-import { Textarea } from '../ui/textarea';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../ui/accordion';
-import { useToast } from '@/hooks/use-toast';
-
-const perguntaSchema = z.object({
-  nome: z.string().optional(),
-  email: z.string().email('Email inválido').optional().or(z.literal('')),
-  categoria: z.string().min(1, 'Selecione uma categoria'),
-  pergunta: z.string().min(10, 'A pergunta deve ter pelo menos 10 caracteres'),
-});
-
-type PerguntaForm = z.infer<typeof perguntaSchema>;
 
 const PerguntasRespostas = () => {
-  const { toast } = useToast();
-  const [isLoading, setIsLoading] = useState(false);
-
-  // Configuração do EmailJS - SUBSTITUA PELOS SEUS DADOS
-  const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';
-  const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
-  const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
-
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-    reset,
-  } = useForm<PerguntaForm>({
-    resolver: zodResolver(perguntaSchema),
-  });
+  // URL do Google Forms - SUBSTITUA pela URL do seu formulário
+  const GOOGLE_FORMS_URL = 'https://forms.gle/SEU_FORMULARIO_AQUI';
 
   const faqItems = [
     {
@@ -66,45 +37,8 @@ const PerguntasRespostas = () => {
     },
   ];
 
-  const onSubmit = async (data: PerguntaForm) => {
-    setIsLoading(true);
-    
-    try {
-      // Preparar dados para o EmailJS
-      const templateParams = {
-        nome: data.nome || 'Não informado',
-        email: data.email || 'Não informado',
-        categoria: data.categoria,
-        pergunta: data.pergunta,
-        to_email: 'seuemail@exemplo.com', // SUBSTITUA pelo seu email
-      };
-
-      console.log('Enviando pergunta via EmailJS:', templateParams);
-
-      // Enviar email via EmailJS
-      await emailjs.send(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_TEMPLATE_ID,
-        templateParams,
-        EMAILJS_PUBLIC_KEY
-      );
-      
-      toast({
-        title: 'Pergunta enviada com sucesso!',
-        description: 'Obrigado por sua pergunta. Responderemos em breve!',
-      });
-      
-      reset();
-    } catch (error) {
-      console.error('Erro ao enviar pergunta:', error);
-      toast({
-        title: 'Erro ao enviar pergunta',
-        description: 'Tente novamente mais tarde.',
-        variant: 'destructive',
-      });
-    } finally {
-      setIsLoading(false);
-    }
+  const handleOpenGoogleForms = () => {
+    window.open(GOOGLE_FORMS_URL, '_blank');
   };
 
   return (
@@ -149,85 +83,48 @@ const PerguntasRespostas = () => {
             </CardContent>
           </Card>
 
-          {/* Formulário de Perguntas */}
+          {/* Google Forms Section */}
           <Card className="border-blue-100">
             <CardHeader>
               <div className="flex items-center gap-3">
-                <Send className="w-6 h-6 text-blue-600" />
+                <ExternalLink className="w-6 h-6 text-blue-600" />
                 <CardTitle className="text-2xl text-gray-900">Faça sua Pergunta</CardTitle>
               </div>
               <CardDescription>
-                Não encontrou o que procurava? Envie sua pergunta e responderemos no seu email (se fornecido)!
+                Não encontrou o que procurava? Use nosso formulário do Google para enviar sua pergunta!
               </CardDescription>
             </CardHeader>
-            <CardContent>
-              <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-                <div>
-                  <input
-                    {...register('nome')}
-                    placeholder="Seu nome (opcional)"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                  />
-                </div>
+            <CardContent className="space-y-6">
+              <div className="bg-blue-50 p-6 rounded-lg border border-blue-200">
+                <h3 className="font-semibold text-blue-900 mb-3">📝 Como funciona:</h3>
+                <ul className="space-y-2 text-blue-800 text-sm">
+                  <li className="flex items-start gap-2">
+                    <span className="text-blue-600">•</span>
+                    Clique no botão abaixo para abrir o formulário
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-blue-600">•</span>
+                    Preencha sua pergunta e dados de contato
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-blue-600">•</span>
+                    Receba a resposta no seu email em até 48h
+                  </li>
+                </ul>
+              </div>
 
-                <div>
-                  <input
-                    {...register('email')}
-                    type="email"
-                    placeholder="seu@email.com (opcional - para resposta)"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                  />
-                  {errors.email && (
-                    <p className="text-red-600 text-sm mt-1">{errors.email.message}</p>
-                  )}
-                </div>
+              <Button
+                onClick={handleOpenGoogleForms}
+                className="w-full bg-blue-600 hover:bg-blue-700 text-white h-12 text-lg"
+                size="lg"
+              >
+                <ExternalLink className="w-5 h-5 mr-3" />
+                Abrir Formulário de Perguntas
+              </Button>
 
-                <div>
-                  <select
-                    {...register('categoria')}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                  >
-                    <option value="">Selecione uma categoria</option>
-                    <option value="biorremediacão">Biorremediação</option>
-                    <option value="tipos-solo">Tipos de Solo</option>
-                    <option value="sensor-arduino">Sensor Arduino</option>
-                    <option value="outros">Outros</option>
-                  </select>
-                  {errors.categoria && (
-                    <p className="text-red-600 text-sm mt-1">{errors.categoria.message}</p>
-                  )}
-                </div>
-
-                <div>
-                  <Textarea
-                    {...register('pergunta')}
-                    placeholder="Digite sua pergunta aqui..."
-                    rows={4}
-                    className="focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                  />
-                  {errors.pergunta && (
-                    <p className="text-red-600 text-sm mt-1">{errors.pergunta.message}</p>
-                  )}
-                </div>
-
-                <Button
-                  type="submit"
-                  disabled={isLoading}
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white"
-                >
-                  {isLoading ? (
-                    <>
-                      <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
-                      Enviando...
-                    </>
-                  ) : (
-                    <>
-                      <Send className="w-4 h-4 mr-2" />
-                      Enviar Pergunta
-                    </>
-                  )}
-                </Button>
-              </form>
+              <div className="text-center text-sm text-gray-500">
+                <p>O formulário abrirá em uma nova aba</p>
+              </div>
             </CardContent>
           </Card>
         </div>
@@ -242,20 +139,16 @@ const PerguntasRespostas = () => {
           </div>
         </div>
 
-        {/* Instruções de configuração do EmailJS */}
-        <div className="mt-8 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
-          <h4 className="font-semibold text-yellow-800 mb-2">⚙️ Configuração Necessária:</h4>
-          <p className="text-yellow-700 text-sm">
-            Para receber as perguntas no seu email, você precisa configurar o EmailJS:
-            <br />
-            1. Crie uma conta em <a href="https://emailjs.com" target="_blank" rel="noopener noreferrer" className="underline">emailjs.com</a>
-            <br />
-            2. Configure um serviço de email (Gmail, Outlook, etc.)
-            <br />
-            3. Crie um template de email
-            <br />
-            4. Substitua as constantes no código pelos seus dados do EmailJS
-          </p>
+        {/* Instruções de configuração do Google Forms */}
+        <div className="mt-8 p-4 bg-green-50 border border-green-200 rounded-lg">
+          <h4 className="font-semibold text-green-800 mb-2">📋 Como criar seu Google Forms:</h4>
+          <div className="text-green-700 text-sm space-y-2">
+            <p><strong>1.</strong> Acesse <a href="https://forms.google.com" target="_blank" rel="noopener noreferrer" className="underline text-green-600">forms.google.com</a></p>
+            <p><strong>2.</strong> Crie um novo formulário</p>
+            <p><strong>3.</strong> Adicione campos: Nome, Email, Categoria, Pergunta</p>
+            <p><strong>4.</strong> Configure para receber notificações por email</p>
+            <p><strong>5.</strong> Copie o link e substitua na constante GOOGLE_FORMS_URL no código</p>
+          </div>
         </div>
       </div>
     </section>
