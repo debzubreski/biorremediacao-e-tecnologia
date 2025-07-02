@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { MessageCircle, HelpCircle, ExternalLink } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
@@ -6,8 +5,8 @@ import { Button } from '../ui/button';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../ui/accordion';
 
 const PerguntasRespostas = () => {
-  // URL do Google Forms - SUBSTITUA pela URL do seu formulário
-  const GOOGLE_FORMS_URL = 'https://forms.gle/SEU_FORMULARIO_AQUI';
+  // URL do Google Forms
+  const GOOGLE_FORMS_URL = 'https://forms.gle/hCchgn8iiZxKfcJ78';
 
   const faqItems = [
     {
