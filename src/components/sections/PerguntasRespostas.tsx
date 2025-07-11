@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { MessageCircle, HelpCircle, ExternalLink } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
@@ -135,18 +136,6 @@ const PerguntasRespostas = () => {
               Suas perguntas nos ajudam a melhorar e expandir nosso conhecimento sobre biorremediação. 
               Cada pergunta é uma oportunidade de aprendizado para toda a comunidade.
             </p>
-          </div>
-        </div>
-
-        {/* Instruções de configuração do Google Forms */}
-        <div className="mt-8 p-4 bg-green-50 border border-green-200 rounded-lg">
-          <h4 className="font-semibold text-green-800 mb-2">📋 Como criar seu Google Forms:</h4>
-          <div className="text-green-700 text-sm space-y-2">
-            <p><strong>1.</strong> Acesse <a href="https://forms.google.com" target="_blank" rel="noopener noreferrer" className="underline text-green-600">forms.google.com</a></p>
-            <p><strong>2.</strong> Crie um novo formulário</p>
-            <p><strong>3.</strong> Adicione campos: Nome, Email, Categoria, Pergunta</p>
-            <p><strong>4.</strong> Configure para receber notificações por email</p>
-            <p><strong>5.</strong> Copie o link e substitua na constante GOOGLE_FORMS_URL no código</p>
           </div>
         </div>
       </div>
