@@ -40,7 +40,7 @@ const OQueE = () => {
             <div className="bg-white p-6 rounded-xl shadow-lg border border-green-100">
               <div className="flex items-center mb-4">
                 <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mr-4">
-                  <Beaker className="w-5 h-5 text-green-600" />
+                  <Beaker className="w-6 h-6 text-green-600" />
                 </div>
                 <h4 className="text-lg font-semibold text-gray-900">Biorremediação Microbiana</h4>
               </div>
@@ -50,7 +50,7 @@ const OQueE = () => {
             <div className="bg-white p-6 rounded-xl shadow-lg border border-green-100">
               <div className="flex items-center mb-4">
                 <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mr-4">
-                  <Leaf className="w-5 h-5 text-green-600" />
+                  <Leaf className="w-6 h-6 text-green-600" />
                 </div>
                 <h4 className="text-lg font-semibold text-gray-900">Fitorremediação</h4>
               </div>
@@ -60,7 +60,7 @@ const OQueE = () => {
             <div className="bg-white p-6 rounded-xl shadow-lg border border-green-100">
               <div className="flex items-center mb-4">
                 <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mr-4">
-                  <Recycle className="w-5 h-5 text-green-600" />
+                  <Recycle className="w-6 h-6 text-green-600" />
                 </div>
                 <h4 className="text-lg font-semibold text-gray-900">Bioaumentação</h4>
               </div>

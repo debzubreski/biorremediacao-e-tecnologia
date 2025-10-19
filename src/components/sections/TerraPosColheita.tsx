@@ -29,7 +29,7 @@ const TerraPosColheita = () => {
             <div className="space-y-6">
               <div className="flex items-start gap-4">
                 <div className="w-8 h-8 bg-yellow-100 rounded-lg flex items-center justify-center mt-1">
-                  <Wheat className="w-4 h-4 text-yellow-600" />
+                  <Wheat className="w-6 h-6 text-yellow-600" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900">Depleção de Nutrientes</h4>
@@ -39,7 +39,7 @@ const TerraPosColheita = () => {
               
               <div className="flex items-start gap-4">
                 <div className="w-8 h-8 bg-yellow-100 rounded-lg flex items-center justify-center mt-1">
-                  <Zap className="w-4 h-4 text-yellow-600" />
+                  <Zap className="w-6 h-6 text-yellow-600" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900">Resíduos Químicos</h4>
@@ -49,7 +49,7 @@ const TerraPosColheita = () => {
               
               <div className="flex items-start gap-4">
                 <div className="w-8 h-8 bg-yellow-100 rounded-lg flex items-center justify-center mt-1">
-                  <Leaf className="w-4 h-4 text-yellow-600" />
+                  <Leaf className="w-6 h-6 text-yellow-600" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900">Matéria Orgânica</h4>
@@ -64,28 +64,28 @@ const TerraPosColheita = () => {
             
             <div className="grid grid-cols-2 gap-4 mb-8">
               <div className="flex items-center gap-3 bg-green-50 p-4 rounded-lg">
-                <Sprout className="w-8 h-8 text-green-600" />
+                <Sprout className="w-6 h-6 text-green-600" />
                 <div>
                   <div className="font-semibold text-green-800">Milho</div>
                   <div className="text-xs text-green-600">Grande consumidor de N</div>
                 </div>
               </div>
               <div className="flex items-center gap-3 bg-yellow-50 p-4 rounded-lg">
-                <Wheat className="w-8 h-8 text-yellow-600" />
+                <Wheat className="w-6 h-6 text-yellow-600" />
                 <div>
                   <div className="font-semibold text-yellow-800">Soja</div>
                   <div className="text-xs text-yellow-600">Esgota P e K</div>
                 </div>
               </div>
               <div className="flex items-center gap-3 bg-orange-50 p-4 rounded-lg">
-                <Sprout className="w-8 h-8 text-orange-600" />
+                <Sprout className="w-6 h-6 text-orange-600" />
                 <div>
                   <div className="font-semibold text-orange-800">Trigo</div>
                   <div className="text-xs text-orange-600">Reduz matéria orgânica</div>
                 </div>
               </div>
               <div className="flex items-center gap-3 bg-red-50 p-4 rounded-lg">
-                <Wheat className="w-8 h-8 text-red-600" />
+                <Wheat className="w-6 h-6 text-red-600" />
                 <div>
                   <div className="font-semibold text-red-800">Algodão</div>
                   <div className="text-xs text-red-600">Alto uso de pesticidas</div>

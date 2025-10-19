@@ -28,7 +28,7 @@ const Sobre = () => {
             <div className="space-y-6">
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-                  <School className="w-5 h-5 text-blue-600" />
+                  <School className="w-6 h-6 text-blue-600" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-1">Instituição</h4>
@@ -38,7 +38,7 @@ const Sobre = () => {
               
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
-                  <MapPin className="w-5 h-5 text-green-600" />
+                  <MapPin className="w-6 h-6 text-green-600" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-1">Localização</h4>
@@ -48,7 +48,7 @@ const Sobre = () => {
               
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
-                  <Calendar className="w-5 h-5 text-purple-600" />
+                  <Calendar className="w-6 h-6 text-purple-600" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-1">Ano Letivo</h4>
@@ -58,7 +58,7 @@ const Sobre = () => {
               
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center">
-                  <Users className="w-5 h-5 text-orange-600" />
+                  <Users className="w-6 h-6 text-orange-600" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-1">Tipo de Trabalho</h4>

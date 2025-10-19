@@ -29,7 +29,7 @@ const TerraVegetal = () => {
             <div className="space-y-6">
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
-                  <Waves className="w-5 h-5 text-green-600" />
+                  <Waves className="w-6 h-6 text-green-600" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-2">Influência Hídrica</h4>
@@ -42,7 +42,7 @@ const TerraVegetal = () => {
               
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
-                  <TreePine className="w-5 h-5 text-green-600" />
+                  <TreePine className="w-6 h-6 text-green-600" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-2">Rica Biodiversidade</h4>
@@ -55,7 +55,7 @@ const TerraVegetal = () => {
               
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
-                  <Fish className="w-5 h-5 text-green-600" />
+                  <Fish className="w-6 h-6 text-green-600" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-2">Ecossistema Aquático</h4>
@@ -73,19 +73,19 @@ const TerraVegetal = () => {
             
             <div className="grid grid-cols-2 gap-3 mb-6">
               <div className="flex items-center gap-2 bg-green-50 p-3 rounded-lg">
-                <Leaf className="w-5 h-5 text-green-600" />
+                <Leaf className="w-6 h-6 text-green-600" />
                 <span className="text-sm font-medium text-green-800">Hortaliças</span>
               </div>
               <div className="flex items-center gap-2 bg-orange-50 p-3 rounded-lg">
-                <Sprout className="w-5 h-5 text-orange-600" />
+                <Sprout className="w-6 h-6 text-orange-600" />
                 <span className="text-sm font-medium text-orange-800">Frutas</span>
               </div>
               <div className="flex items-center gap-2 bg-purple-50 p-3 rounded-lg">
-                <TreePine className="w-5 h-5 text-purple-600" />
+                <TreePine className="w-6 h-6 text-purple-600" />
                 <span className="text-sm font-medium text-purple-800">Plantas Ornamentais</span>
               </div>
               <div className="flex items-center gap-2 bg-blue-50 p-3 rounded-lg">
-                <Waves className="w-5 h-5 text-blue-600" />
+                <Waves className="w-6 h-6 text-blue-600" />
                 <span className="text-sm font-medium text-blue-800">Cultivos Aquáticos</span>
               </div>
             </div>

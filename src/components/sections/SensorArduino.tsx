@@ -28,7 +28,7 @@ const SensorArduino = () => {
             <div className="space-y-4">
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-                  <Cpu className="w-5 h-5 text-blue-600" />
+                  <Cpu className="w-6 h-6 text-blue-600" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900">Arduino UNO</h4>
@@ -38,7 +38,7 @@ const SensorArduino = () => {
               
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
-                  <Droplets className="w-5 h-5 text-green-600" />
+                  <Droplets className="w-6 h-6 text-green-600" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900">Sensor de Umidade</h4>
@@ -48,7 +48,7 @@ const SensorArduino = () => {
               
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center">
-                  <Lightbulb className="w-5 h-5 text-red-600" />
+                  <Lightbulb className="w-6 h-6 text-red-600" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900">LED Indicador</h4>
@@ -58,7 +58,7 @@ const SensorArduino = () => {
               
               <div className="flex items-start gap-4">
                 <div className="w-10 h-10 bg-yellow-100 rounded-lg flex items-center justify-center">
-                  <Zap className="w-5 h-5 text-yellow-600" />
+                  <Zap className="w-6 h-6 text-yellow-600" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900">Protoboard</h4>

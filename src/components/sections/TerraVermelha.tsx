@@ -28,7 +28,7 @@ const TerraVermelha = () => {
             <div className="space-y-4">
               <div className="flex items-start gap-4">
                 <div className="w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center mt-1">
-                  <Mountain className="w-4 h-4 text-red-600" />
+                  <Mountain className="w-6 h-6 text-red-600" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900">Composição Mineral</h4>
@@ -38,7 +38,7 @@ const TerraVermelha = () => {
               
               <div className="flex items-start gap-4">
                 <div className="w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center mt-1">
-                  <BarChart3 className="w-4 h-4 text-red-600" />
+                  <BarChart3 className="w-6 h-6 text-red-600" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900">pH e Fertilidade</h4>
@@ -48,7 +48,7 @@ const TerraVermelha = () => {
               
               <div className="flex items-start gap-4">
                 <div className="w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center mt-1">
-                  <Droplets className="w-4 h-4 text-red-600" />
+                  <Droplets className="w-6 h-6 text-red-600" />
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900">Propriedades Físicas</h4>
