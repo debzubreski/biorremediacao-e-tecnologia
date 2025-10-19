@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
@@ -9,26 +8,28 @@ import TerraVegetal from '../components/sections/TerraVegetal';
 import SensorArduino from '../components/sections/SensorArduino';
 import PerguntasRespostas from '../components/sections/PerguntasRespostas';
 import Sobre from '../components/sections/Sobre';
-
 const Index = () => {
   const [currentSection, setCurrentSection] = useState('home');
-
   const handleNavigate = (section: string) => {
     setCurrentSection(section);
-    
+
     // Scroll suave para a seção se não for home
     if (section !== 'home') {
       const element = document.getElementById(section);
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        element.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
       }
     } else {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     }
   };
-
-  return (
-    <div className="min-h-screen bg-white">
+  return <div className="min-h-screen bg-white">
       <Header onNavigate={handleNavigate} />
       
       {/* Hero sempre visível */}
@@ -69,13 +70,9 @@ const Index = () => {
           <p className="text-gray-600">
             © 2025 - Trabalho Escolar sobre Biorremediação e Tecnologia
           </p>
-          <p className="text-sm text-gray-500 mt-2">
-            Escola Estadual de Ensino Básico Albino Fantin - Horizontina, RS
-          </p>
+          <p className="text-sm text-gray-500 mt-2">Escola Estadual de Ensino Básico Albino Fantin - Horizontina, Rio Grande do Sul</p>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
